@@ -108,6 +108,7 @@ local function display_minintro(payload)
 end
 
 local function setup(options)
+	options = options or {}
 	vim.api.nvim_set_hl(highlight_ns_id, "Default", { fg = options.color or DEFAULT_COLOR })
 	vim.api.nvim_set_hl_ns(highlight_ns_id)
 
