@@ -100,7 +100,7 @@ local function display_minintro(payload)
 
 	draw_minintro(minintro_buff, INTRO_LOGO_WIDTH, INTRO_LOGO_HEIGHT)
 
-	vim.api.nvim_create_autocmd("WinResized", {
+	vim.api.nvim_create_autocmd({ "WinResized", "VimResized" }, {
 		group = autocmd_group,
 		buffer = minintro_buff,
 		callback = redraw
@@ -108,6 +108,7 @@ local function display_minintro(payload)
 end
 
 local function setup(options)
+	options = options or {}
 	vim.api.nvim_set_hl(highlight_ns_id, "Default", { fg = options.color or DEFAULT_COLOR })
 	vim.api.nvim_set_hl_ns(highlight_ns_id)
 
