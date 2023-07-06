@@ -26,7 +26,7 @@ If you just want a simple and lightweight startup intro that works, this plugin 
 -- Packer
 use {
     "eoh-bse/minintro.nvim",
-    config = function() require("minintro").setup()
+    config = function() require("minintro").setup() end
 }
 ```
 
@@ -47,7 +47,7 @@ to create a separate config file. Pass the config directly in your plugin instal
 -- Packer
 use {
     "eoh-bse/minintro.nvim",
-    config = function() require("minintro").setup({ color = "#98c379" })
+    config = function() require("minintro").setup({ color = "#98c379" }) end
 }
 ```
 
