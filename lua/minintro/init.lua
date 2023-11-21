@@ -73,10 +73,11 @@ local function create_and_set_minintro_buf(default_buff)
 end
 
 local function set_options()
-	vim.opt_local.number = false
-	vim.opt_local.relativenumber = false
-	vim.opt_local.list = false
-	vim.opt_local.colorcolumn = "0"
+	vim.opt_local.number = false         -- disable line numbers
+	vim.opt_local.relativenumber = false -- disable relative line numbers
+	vim.opt_local.list = false           -- disable displaying whitespace
+	vim.opt_local.fillchars = { eob = ' ' } -- do not display "~" on each new line
+	vim.opt_local.colorcolumn = "0"      -- disable colorcolumn
 end
 
 local function redraw()
