@@ -50,6 +50,24 @@ use {
     config = function() require("minintro").setup({ color = "#98c379" }) end
 }
 ```
+### Configuration with Pywal
+To configure minintro color with [Pywal](https://github.com/AlphaTechnolog/pywal.nvim) plugin on the fly you could use Pywal core to get colors and set it up in minintro as below:
+```lua
+-- Lazy
+{
+    "eoh-bse/minintro.nvim",
+    lazy = false
+}
+```
+
+```lua
+-- minintro plugin setup
+local pywal_core = require('pywal.core')
+local colors = pywal_core.get_colors()
+require("minintro").setup({
+	color = colors.color1,
+})
+```
 
 ## Things to be aware of
 If you have some sort of `tabline` plugin such as [bufferline](https://github.com/akinsho/bufferline.nvim),
