@@ -127,7 +127,6 @@ local function setup(options)
 	intro_logo = options.logo
 	intro_logo_width = options.logo_width
 	intro_logo_height = #options.logo
-	print(intro_logo_width, intro_logo_height)
 
 	vim.api.nvim_create_autocmd("VimEnter", {
 		group = autocmd_group,
