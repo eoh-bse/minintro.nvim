@@ -1,5 +1,5 @@
 # minintro.nvim
-Extremely minimalistic intro screen for Neovim
+Extremely minimalistic startup/intro screen for Neovim
 
 ## Motivation
 Neovim intro screen can be extremely buggy and forced to close automatically by plugins installed such as 
