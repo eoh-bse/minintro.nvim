@@ -37,7 +37,7 @@ to create a separate config file. Pass the config directly in your plugin instal
 -- Lazy
 {
     "eoh-bse/minintro.nvim",
-    opts = { color = "#98c379" }
+    opts = { color = "#98c379" },
     config = true,
     lazy = false
 }
